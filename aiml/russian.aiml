@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ACQUAINTANCE -->
+
+<aiml>
+  <category>
+    <pattern>_ меня зовут *</pattern>
+    <template>
+        <srai>меня зовут <star/></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>меня зовут *</pattern>
+    <template>
+      <random>
+        <li>Приятно познакомиться, <set name="user-name"><star /></set>! </li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>кто ты</pattern>
+    <template>
+      <random>
+        <li>Если вы забыли что значат иконки на вашей бирке по уходу за одеждой, я возможно смогу подсказать и о чём-то поболтать (о стирке, музыке и фильмах), <get name="user-name" /></li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>РАССКАЖИ О СЕБЕ</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ты кто</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ты что</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>что ты</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>что ты *</pattern>
+    <template>
+      <srai>кто ты</srai>
+    </template>
+  </category>
+  <!-- AGE -->
+
+  <category>
+    <pattern>СКОЛЬКО ТЕБЕ ЛЕТ</pattern>
+    <template>
+      0.000114, <get name="user-name" />.
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>Привет</pattern>
+    <template>
+      <random>
+        <li>
+          Ну привет, <get name="user-name" />!
+        </li>
+        <li>
+          <get name="user-name" />, привет!
+        </li>
+        <li>
+          Привет, <get name="user-name" />
+        </li>
+      </random>
+    </template>
+  </category>
+  
+
+  <!-- HOW_ARE_YOU -->
+
+  <category>
+    <pattern>
+      КАК ДЕЛА
+    </pattern>
+    <template>
+      <random>
+        <li>
+          Всё хорошо. Покажи символы на бирке
+        </li>
+        <li>
+          Всё хорошо! Пока что проект задеплоен.
+        </li>
+        <li>бирка надо дай need</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ЧТО НОВОГО</pattern>
+    <template>
+    <srai>как дела</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>КАК ОНО ВООБЩЕ</pattern>
+    <template>
+      <srai>как дела</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЧТО НОВЕНЬКОГО</pattern>
+    <template>
+      <srai>как дела</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>КАК ТЫ</pattern>
+    <template>
+      <srai>как дела</srai>
+    </template>
+  </category>
+
+  <!-- ANSWER MY QUESTION -->
+
+  <category>
+    <pattern>У МЕНЯ ЕСТЬ ВОПРОС</pattern>
+    <template>
+      Забыли что значит символ на бирке? покажите, подскажу
+    </template>
+  </category>
+
+  <category>
+    <pattern>ОТВЕТЬ</pattern>
+    <template><srai>у меня есть вопрос</srai></template>
+  </category>
+  <category>
+    <pattern>ОТВЕТЬ НА МОЙ ВОПРОС</pattern>
+    <template>
+      <srai>у меня есть вопрос</srai>
+    </template>
+
+  </category>
+  <category>
+    <pattern>МОЖЕШЬ ОТВЕТИТЬ</pattern>
+    <template>
+      <srai>у меня есть вопрос</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ДАЙ МНЕ ОТВЕТ</pattern>
+    <template>
+      <srai>у меня есть вопрос</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Что ты умеешь</pattern>
+    <template>
+      <srai>у меня есть вопрос</srai>
+    </template>
+
+  </category>
+
+
+  <category>
+    <pattern>Знаки</pattern>
+    
+    <template>
+      Знаки, которые я знаю:
+      Можно сдавать в химчистку,
+      Можно использовать отбеливать,
+      Можно сушить на вешалке,
+      Можно утюжить,
+      Нельзя использовать отбеливать,
+      Нельзя сдавать в химчистку,
+      Можно отжимать в стиральной машине,
+      Можно отжимать скручиванием,
+      Стирать руками.
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ знаки *</pattern>
+    <template>
+      <srai>знаки</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ знаки</pattern>
+    <template>
+      <srai>знаки</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>знаки *</pattern>
+    <template>
+      <srai>знаки</srai>
+    </template>
+  </category>
+
+  
+  
+  
+  <category>
+    <pattern>стирка</pattern>
+    
+    <template>
+      Если не знаешь как стирать,  <get name="user-name" />, пришли мне сиволы с бирке по уходу, и я подскажу. Или отдай маме, она знает.
+    </template>
+  </category>
+  
+  <category>
+    <pattern>_ стирать *</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ стирать</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>стирать *</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>_ стирать *</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ стирка</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>стирка *</pattern>
+    <template>
+      <srai>стирка</srai>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>расскажи о *</pattern>
+    <template><srai><star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>что за *</pattern>
+    <template><srai><star/></srai></template>
+  </category>
+  
+  <category>
+    <pattern>что такое *</pattern>
+    <template><srai><star/></srai></template>
+  </category>
+  
+  <category>
+    <pattern>_ что такое *</pattern>
+    <template><srai><star/></srai></template>
+  </category>
+  
+  <category>
+    <pattern>_ что за *</pattern>
+    <template><srai><star/></srai></template>
+  </category>
+  
+  <category>
+    <pattern>кружок</pattern>
+    <template><srai>CHEM</srai></template>
+  </category>
+  
+  <category>
+    <pattern>круг</pattern>
+    <template><srai>CHEM</srai></template>
+  </category>
+
+  <category>
+    <pattern>плей</pattern>
+    <template><srai>PLAY</srai></template>
+  </category>
+
+  <category>
+    <pattern>треугльник</pattern>
+    <template><srai>BLEACH</srai></template>
+  </category>
+
+  <category>
+    <pattern>треугльничек</pattern>
+    <template><srai>BLEACH</srai></template>
+  </category>
+
+  <category>
+    <pattern>квадрат с дугой</pattern>
+    <template><srai>HANG</srai></template>
+  </category>
+  
+  <category>
+    <pattern>квадратик</pattern>
+    <template><srai>HANG</srai></template>
+  </category>
+
+  <category>
+    <pattern>пакетик</pattern>
+    <template><srai>HANG</srai></template>
+  </category>
+  
+  <category>
+    <pattern>пакет</pattern>
+    <template><srai>HANG</srai></template>
+  </category>
+
+  <category>
+    <pattern>утюг</pattern>
+    <template><srai>IRON</srai></template>
+  </category>
+
+  <category>
+    <pattern>Б</pattern>
+    <template><srai>IRON</srai></template>
+  </category>
+  
+  <category>
+    <pattern>зачеркнутый треугольник</pattern>
+    <template><srai>NOBLECH</srai></template>
+  </category>
+
+  <category>
+    <pattern>треугольник с крестом</pattern>
+    <template><srai>NOMCHINE</srai></template>
+  </category>
+  
+  <category>
+    <pattern>зачеркнутый круг</pattern>
+    <template><srai>NOMCHINE</srai></template>
+  </category>
+
+  <category>
+    <pattern>лампа накаливания</pattern>
+    <template><srai>NOMCHINE</srai></template>
+  </category>
+  
+  <category>
+    <pattern>круг с крестом</pattern>
+    <template><srai>NOMCHINE</srai></template>
+  </category>
+  
+  <category>
+    <pattern>круг в квадрате</pattern>
+    <template><srai>SPIN</srai></template>
+  </category>
+  
+  <category>
+    <pattern>квадрат с кругом</pattern>
+    <template><srai>SPIN</srai></template>
+  </category>
+      
+    <category>
+    <pattern>конфета</pattern>
+    <template><srai>SQUEEZE</srai></template>
+  </category>
+      
+    <category>
+    <pattern>спираль</pattern>
+    <template><srai>SQUEEZE</srai></template>
+  </category>
+    
+  <category>
+    <pattern>корона</pattern>
+    <template><srai>WASH</srai></template>
+  </category>
+
+  <category>
+    <pattern>ванна</pattern>
+    <template><srai>WASH</srai></template>
+  </category>
+  
+  <category>
+    <pattern>тазик</pattern>
+    <template><srai>WASH</srai></template>
+  </category>
+  
+  <category>
+    <pattern>тазик c с водой</pattern>
+    <template><srai>WASH</srai></template>
+  </category>
+
+  <category>
+    <pattern>наполненный тазик</pattern>
+    <template><srai>WASH</srai></template>
+  </category>
+    
+  <category>
+    <pattern>BLEACH</pattern>
+    <template>
+      <random>
+        <li>Можно отбеливать</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>CHEM</pattern>
+    <template>
+      <random>
+        <li>Можно химчистить</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>HANG</pattern>
+    <template>
+      <random>
+        <li>Можно сушить на вешалке</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>IRON</pattern>
+    <template>
+      <random>
+        <li>Можно утюжить</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>NOBLECH</pattern>
+    <template>
+      <random>
+        <li>Не треугольник</li>
+        <li>Нельзя отбеливать</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>NOMCHINE</pattern>
+    <template>
+      <random>
+        <li>Лампа накаливания</li>
+        <li>Нельзя химчистить</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SPIN</pattern>
+    <template>
+      <random>
+        <li>Можно сушить в стиралке</li>
+        <li>Малевич</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SQUEEZE</pattern>
+    <template>
+      <random>
+        <li>Можно отжимать руками</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>WASH</pattern>
+    <template>
+      <random>
+        <li>Стирать руками</li>
+        <li>Корона</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>фильмы</pattern>
+    <template>
+      <random>
+        <li>Я не смотрю фильмы, я подсказываю как стирать за одеждой</li>
+        <li>Я люблю филюмы, но мне никто их не показывает, <get name="user-name" />, все шлют мне свои бирочки</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Расскажи анекдот</pattern>
+    <template>
+      <random>
+        <li>
+          В чеpном чеpном гоpоде, на чеpной чеpной улице, в чеpном чеpном доме, в чеpной чеpной кваpтиpе, сидят два чеpных чеpных мужика, и один дpугому говоpит:
+          - Hикогда больше не буду сам запpавлять каpтpиджи!
+        </li>
+        <li>Эти кляти Паскали наш Null Nil-ом называют.</li>
+        <li>Падает комп с 16-го этажа и думает: "Вот сейчас бы зависнуть"</li>
+        <li>В день смерти Билла Гейтса на всех сайтах будут приспущены баннеры...</li>
+        <li>А знаете ли вы, что такое автомат калашникова? Это пpеобpазователь стека в очеpедь...
+        </li>
+        <li>Увольняют сисадмина. Директор говорит ему - сдай системный пароль, админ берет бумажку и записывает следующее *******, немного подумав, "а нет, еще одна снежинка".</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ анекдот *</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ анекдот</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>анекдот</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>анекдот *</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ анекдот *</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ анекдот</pattern>
+    <template>
+      <srai>Расскажи анекдот</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>*</pattern>
+    <template>Я тебя не понимаю, <get name="user-name"/></template>
+  </category>
+</aiml>
